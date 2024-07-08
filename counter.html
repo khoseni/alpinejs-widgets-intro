@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Counter Widget Grid</title>
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/alpine.js" defer></script>
+  <!--<link rel="stylesheet" href="style.css">-->
+</head>
+<body>
+  <div x-data="{ count: 0 }">
+    <div class="counter-widget">
+      <h2>Counter</h2>
+      <p x-text="count"></p>
+      <button @click="count++">Increment</button>
+      <button @click="count--">Decrement</button>
+    </div>
+  </div>
+</body>
+</html>
