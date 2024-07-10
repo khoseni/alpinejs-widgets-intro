@@ -1,22 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Counter Widget Grid</title>
-  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/alpine.js" defer></script>
-  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
+  <title>Document</title>
 </head>
+
 <body>
-  <div x-data="{ count: 0 }">
-    <div class="counter-widget">
-      <h2>Counter</h2>
-      <p x-text="count"></p>
-      <button @click="count++">Increment</button>
-      <button @click="count--">Decrement</button>
+
+  <div x-data="counterApp()" x-data="{ mainCount: 0 }" class="counter-container">
+
+    <h1>Counter</h1>
+    <span x-text="mainCount"></span>
+    <div>
+      <button @click="incrementMain()">Increment</button>
+      <button @click="decrementMain()">Decrement</button>
+      <button @click="maxMain()">Maximum</button>
+      <button @click="resetMain()">Reset</button>
+
     </div>
   </div>
+</div>
+
+
+  <script src="counter.js" defer></script>
 </body>
+
 </html>
-
-
