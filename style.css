@@ -1,37 +1,35 @@
-/* styles.css */
-
 body {
-  font-family: 'Arial', sans-serif;
+  background-color: #f2e4d7; 
+  font-family: Arial, sans-serif;
   padding: 20px;
 }
 
-.counter-container {
+.row {
   margin-bottom: 20px;
 }
 
-.counter {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 10px;
+.col {
+  border: 1px solid #f9d15c; 
+  border-radius: 8px;
+  padding: 20px;
+  background-color: #fff9e6; 
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.counter button {
-  padding: 8px 12px;
-  background-color: #4CAF50;
-  color: white;
+h2 {
+  color: #333; 
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px 15px;
   border: none;
-  border-radius: 4px;
+  border-radius: 5px;
+  background-color: #f9d15c; 
+  color: white;
   cursor: pointer;
 }
 
-.counter button:hover {
-  background-color: #45a049;
-}
-
-.counter span {
-  padding: 8px;
-  background-color: #f1f1f1;
-  border-radius: 4px;
-  margin: 0 10px;
+button:hover {
+  background-color: #e6c74e; 
 }

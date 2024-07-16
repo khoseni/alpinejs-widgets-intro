@@ -5,43 +5,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
-  <link rel="stylesheet" href="style.css">
   <title>Document</title>
 </head>
 
 <body>
 
-  <div x-data="{ count : 0 } ">
+  <div x-data="counterApp()" x-data="{ mainCount: 0 }" class="counter-container">
+
     <h1>Counter</h1>
-    <div class="counter" x-text="count"></div>
+    <span x-text="mainCount"></span>
     <div>
-      <button @click="count++">+</button>
-      <button @click="count--">-</button>
-      <button onclick="reset">reset</button>
-      <button onclick = "maximum">maximum</button>
+      <button @click="incrementMain()">Increment</button>
+      <button @click="decrementMain()">Decrement</button>
+      <button @click="maxMain()">Maximum</button>
+      <button @click="resetMain()">Reset</button>
+
     </div>
   </div>
+</div>
 
 
-<script>
-  function Counter() {
-    return {
-      count: 0,
-      increment() {
-        this.count++;
-      },
-      decrement() {
-        this.count--;
-      },
-    };
-  }
-
-  document.addEventListener('alpine:init', () => {
-    Alpine.data('counter', Counter);
-  });
-</script>
-
-
+  <script src="counter.js" defer></script>
 </body>
 
 </html>
